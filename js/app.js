@@ -1,12 +1,25 @@
+let usuario = document.getElementById("user")
+let clave = document.getElementById("pass")
+let boton = document.getElementById("datos");
 
-function login (){
 
-    let user = window.prompt("ingrese su usuario")
-    let pass = window.prompt("ingresar la clave")
+
+boton.onclick = function() {
+
+    let user = usuario.value;
+    let pass = clave.value;
+
+ 
 
     if(user === "admin" && pass === "admin"){
-        agendarCita(ingreso = true)
+
+        window.location.assign("../html/agenda.html")
+      
+        agendarCita(ingreso = true);
+        
+        
     }
+
 
     else {
         alert("Datos no validos")
@@ -18,102 +31,104 @@ login();
 
 
 
-function agendarCita (ingreso){
+
+
+// function agendarCita (ingreso){
 
     
 
-    if(ingreso === true){      
+//     if(ingreso === true){      
 
-        // funcion de confrimacion
+//         // funcion de confrimacion
 
-        function confiracion() {
+//         function confiracion() {
 
-            // captura de funciones
+//             // captura de funciones
 
-            let tipo = tipoCita();
-            let dia = diaCita();
-            let hora = horaCita();  
+//             let tipo = tipoCita();
+//             let dia = diaCita();
+//             let hora = horaCita();  
 
-            // imprime confirmacion de cita
-            let vista = "La cita para " + tipo + " esta agendada para el dia " + dia + " a las " + hora + " horas"
+//             // imprime confirmacion de cita
+//             let vista = "La cita para " + tipo + " esta agendada para el dia " + dia + " a las " + hora + " horas"
 
-            return vista
+//             return vista
                   
             
-              }   
+//               }   
 
 
 
           
 
 
-        // funcion tipo de cita
-       function tipoCita (){
+//         // funcion tipo de cita
+//        function tipoCita (){
 
-        let  cita =  parseInt(window.prompt("Si desea cita medicina general ingrese el 1 Si desea cita odontologia ingrese el 2 Si desea cita examanes medicos ingrese el 3"))
+//         let  cita =  parseInt(window.prompt("Si desea cita medicina general ingrese el 1 Si desea cita odontologia ingrese el 2 Si desea cita examanes medicos ingrese el 3"))
             
-            // validacion de cita
+//             // validacion de cita
 
-            if( cita === 1 ){
-               return "medicina general"
-            }
+//             if( cita === 1 ){
+//                return "medicina general"
+//             }
 
-            else if (cita === 2){
-                return "Odontología"
-            }
+//             else if (cita === 2){
+//                 return "Odontología"
+//             }
 
-            else if (cita === 3){
-                return "Examenmedico"
-            }
+//             else if (cita === 3){
+//                 return "Examenmedico"
+//             }
 
-            else{
+//             else{
     
-                    alert("Dato no valido")
+//                     alert("Dato no valido")
                 
     
-            }
+//             }
 
 
-       }    
+//        }    
 
-    //   funcion dia de la cita
+//     //   funcion dia de la cita
        
-       function diaCita (){
+//        function diaCita (){
 
-       let  dia =  parseInt(window.prompt("Para el día lunes ingrese 1, Para el día martes ingrese 2, Para el día miercoles ingrese 3, Para el día jueves ingrese 4, Para el día viernes ingrese 5,"))
+//        let  dia =  parseInt(window.prompt("Para el día lunes ingrese 1, Para el día martes ingrese 2, Para el día miercoles ingrese 3, Para el día jueves ingrese 4, Para el día viernes ingrese 5,"))
 
-        // array dias de la semana
+//         // array dias de la semana
 
-       const diaSemana = ["lunes", "martes", "miercoles", "jueves", "viernes"]
+//        const diaSemana = ["lunes", "martes", "miercoles", "jueves", "viernes"]
 
-              return diaSemana[dia - 1];
+//               return diaSemana[dia - 1];
             
-        }
+//         }
 
-        // funcion de hora de cita
+//         // funcion de hora de cita
 
-       function horaCita(){
+//        function horaCita(){
          
-            //ciclo que muestra las horas disponibles 
-            for (let i = 8; i <=12; i++) {
-                alert(" horas disponibles " + i);            
-            }
+//             //ciclo que muestra las horas disponibles 
+//             for (let i = 8; i <=12; i++) {
+//                 alert(" horas disponibles " + i);            
+//             }
 
-            return parseInt(prompt("ingrese la hora deseada "))
+//             return parseInt(prompt("ingrese la hora deseada "))
     
             
-           }
+//            }
 
-        // instancia de funcion de configuracion    
-        const agendaCita = confiracion(tipoCita,diaCita,horaCita);
-        document.write(agendaCita);
+//         // instancia de funcion de configuracion    
+//         const agendaCita = confiracion(tipoCita,diaCita,horaCita);
+//         document.write(agendaCita);
 
-       }
+//        }
 
     
     
 
-    }
+//     }
 
 
 

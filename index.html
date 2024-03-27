@@ -3,29 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<!-- link bootstrap -->
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
 <!-- link css -->
 <link rel="stylesheet" href="css/style.css">
 
 <title>Agende su Cita</title>
 </head>
-<body>
+<body> 
+    <section>
+        <div class="contenedor">
+            <div class="formulario">
+                <form action="#">
+                    <h2>Iniciar Sesión</h2>
 
-    <header>
-        <h1>Agende su Cita</h1>
-        
-    </header>
+                    <div class="input-contenedor">                     
+                        <input id="user" type="text" required>
+                        <label for="#">User</label>
+                    </div>
 
-    
-    
+                    <div class="input-contenedor">
+                        <input id = "pass" type="password" required>
+                        <label for="#">Contraseña</label>
+                    </div>
 
-  
+                    <div class="olvidar">
+                        <label for="#">
+                            <input type="checkbox"> Recordar
+                            <a href=""#>Olvido su contraseña</a>
+                        </label>
+                    </div>
+                </form>
+            
+            <div>
+                <button id="datos">Acceder</button>
+                <div class="resgistrar">
+                    <p>No tengo cuenta <a href="#">crear una</a></p>
+                </div>
 
-
-
-    
-
+            </div>
+        </div>
+    </div>
+    </section>
 
   
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>

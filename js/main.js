@@ -1,5 +1,14 @@
-let user = window.prompt("ingrese su usuario")
-let pass = window.prompt("ingresar la clave")
+let user = document.getElementById("user")
+let pass = document.getElementById("pass")
+let boton = document.getElementById("datos")
+
+botonCapturar.onclick = function() {
+    // Capturamos el valor del campo de entrada
+    var datoCapturado = datoInput.value;
+
+    // Hacemos algo con el dato capturado, como mostrarlo en la consola
+    console.log("Dato capturado:", datoCapturado);
+};
 
 if(user === "admin" && pass === "admin"){
 
